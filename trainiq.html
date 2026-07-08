@@ -1,0 +1,190 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrainIQ by Coach Alash · Personal Training in Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coal:#131412;
+  --coal-2:#1B1D1A;
+  --line:rgba(240,238,232,.12);
+  --chalk:#F0EEE8;
+  --chalk-dim:rgba(240,238,232,.6);
+  --ember:#FF5A1F;
+  --ember-deep:#D9430C;
+  --wa:#25D366;
+  --disp:'Archivo',-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--coal);color:var(--chalk);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px}
+@media(min-width:900px){.wrap{max-width:960px}}
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:13px 22px;background:rgba(19,20,18,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .logo{font-family:var(--disp);font-weight:800;font-size:1.05rem;letter-spacing:.06em;color:var(--chalk);text-decoration:none;text-transform:uppercase}
+.bar .logo span{color:var(--ember)}
+.bar-cta{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#06281a;background:var(--wa);padding:9px 16px;border-radius:6px;text-decoration:none;white-space:nowrap}
+.hero{padding:64px 0 52px;position:relative}
+.hero::before{content:"";position:absolute;left:-120px;bottom:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.13),transparent 65%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ember);margin-bottom:20px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--ember)}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,10.5vw,5.2rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
+h1 em{font-style:normal;color:var(--ember)}
+.hero .sub{margin-top:20px;color:var(--chalk-dim);max-width:33em;font-size:1.02rem}
+.hero .sub b{color:var(--chalk)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:8px;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#06281a}
+.btn-ghost{border:1px solid var(--line);color:var(--chalk)}
+.wa-ic{width:19px;height:19px;flex:none}
+section{padding:58px 0}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ember);margin-bottom:14px}
+.sec-label::before{content:"";width:26px;height:2px;background:var(--ember)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.8rem,6.5vw,2.8rem);line-height:1.05;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;margin-bottom:20px}
+.prog-grid{display:grid;gap:14px}
+@media(min-width:900px){.prog-grid{grid-template-columns:repeat(3,1fr)}}
+.prog{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--coal-2);position:relative;overflow:hidden}
+.prog::before{content:"";position:absolute;top:0;left:0;width:44px;height:3px;background:var(--ember)}
+.prog h3{font-family:var(--disp);font-weight:800;font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:8px}
+.prog p{font-size:.92rem;color:var(--chalk-dim)}
+.prog .dur{display:inline-block;margin-top:14px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.method{background:var(--coal-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.method p.body{color:var(--chalk-dim);max-width:37em;margin-bottom:14px}
+.method p.body b{color:var(--chalk)}
+.cred-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cred-tags span{font-size:.78rem;font-weight:600;letter-spacing:.05em;border:1px solid var(--line);border-radius:100px;padding:8px 14px;color:var(--chalk)}
+.dsc{margin-top:24px;border-left:2px solid var(--ember);padding-left:18px;font-size:.95rem;color:var(--chalk)}
+.dsc small{display:block;color:var(--chalk-dim);font-size:.78rem;margin-top:4px;letter-spacing:.06em;text-transform:uppercase}
+.quote-sec{text-align:left}
+.bigquote{font-family:var(--disp);font-weight:800;font-size:clamp(1.5rem,6vw,2.4rem);line-height:1.15;text-transform:uppercase;letter-spacing:-.01em;max-width:20em;text-wrap:balance}
+.bigquote em{font-style:normal;color:var(--ember)}
+.q-src{margin-top:16px;font-size:.8rem;color:var(--chalk-dim);letter-spacing:.08em;text-transform:uppercase}
+.q-score{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-size:.85rem;color:var(--chalk)}
+.q-score b{color:var(--ember)}
+.visit .card{border:1px solid var(--line);border-radius:12px;padding:24px;background:var(--coal-2)}
+.visit .cards{display:grid;gap:14px}
+@media(min-width:900px){.visit .cards{grid-template-columns:1fr 1fr}}
+.visit h3{font-family:var(--disp);font-weight:800;font-size:1.15rem;text-transform:uppercase;margin-bottom:8px}
+.visit p{font-size:.92rem;color:var(--chalk-dim)}
+.visit p b{color:var(--chalk)}
+footer{padding:42px 0 120px;border-top:1px solid var(--line);text-align:center}
+footer .logo{font-family:var(--disp);font-weight:800;font-size:1.4rem;text-transform:uppercase}
+footer .logo span{color:var(--ember)}
+footer p{font-size:.8rem;color:var(--chalk-dim);margin-top:8px}
+.sticky-wa{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(19,20,18,.6) 30%,rgba(19,20,18,.94))}
+.sticky-wa a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:640px;margin:0 auto;background:var(--wa);color:#06281a;font-weight:700;font-size:1rem;padding:16px;border-radius:10px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+@media(min-width:900px){.sticky-wa{display:none}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+
+<main>
+<div class="bar">
+  <a class="logo" href="#top">Train<span>IQ</span></a>
+  <a class="bar-cta" href="https://wa.me/971585290353?text=Hi%20Coach%2C%20I%27d%20like%20to%20book%20a%20consultation">Book consult</a>
+</div>
+
+<header class="hero wrap" id="top">
+  <p class="eyebrow">Personal Training · Dubai</p>
+  <h1>Train with a plan.<br><em>Not with luck.</em></h1>
+  <p class="sub"><b>TrainIQ by Coach Alash</b> (Ali Ashik): 360-degree, science-based personal training. One-to-one sessions, diet screening and transformation coaching, in the gym in Al Quoz or online, wherever you are.</p>
+  <div class="cta-row">
+    <a class="btn btn-wa" href="https://wa.me/971585290353?text=Hi%20Coach%2C%20I%27d%20like%20to%20book%20a%20consultation">
+      <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 2.6 1.1 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Message Coach Alash</a>
+    <a class="btn btn-ghost" href="#programs">The programs</a>
+  </div>
+</header>
+
+<section class="wrap" id="programs">
+  <div class="rv">
+  <p class="sec-label">The programs</p>
+  <h2>Pick your track</h2>
+  <div class="prog-grid">
+    <div class="prog">
+      <h3>1-to-1 Personal Training</h3>
+      <p>360-degree, pure scientific personal training. Strength, fat loss, conditioning, programmed around your body, not a template.</p>
+      <span class="dur">60 min sessions</span>
+    </div>
+    <div class="prog">
+      <h3>Diet Screening</h3>
+      <p>A focused look at what you actually eat, with meal planning built on certified nutrition methodology.</p>
+      <span class="dur">30 min</span>
+    </div>
+    <div class="prog">
+      <h3>Online Coaching</h3>
+      <p>Transformation programs, contest prep and injury-aware training, coached remotely with weekly check-ins.</p>
+      <span class="dur">Wherever you are</span>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap rv">
+    <p class="sec-label">The method</p>
+    <h2>Certified. Not improvised.</h2>
+    <p class="body">Coach Alash brings an international certification stack covering strength, nutrition, rehab and special populations, so the plan you follow is built on <b>method, not Instagram trends</b>.</p>
+    <div class="cred-tags">
+      <span>REPS Level 3 PT</span><span>NSCA CSCS</span><span>PN Level 1 Nutrition</span><span>Contest Prep</span><span>Injury Rehab</span><span>Pre &amp; Post Pregnancy</span><span>Functional &amp; MMA Training</span>
+    </div>
+    <p class="dsc">"The first internationally qualified personal training company registered with Dubai Sports Council."<small>TrainIQ studio profile</small></p>
+  </div>
+</section>
+
+<section class="wrap quote-sec">
+  <div class="rv">
+  <p class="sec-label">Client verdict</p>
+  <p class="bigquote">"Alash pushed me to the max and everything is on fire. <em>Definitely would recommend."</em></p>
+  <p class="q-src">ClassPass member review</p>
+  <p class="q-score"><b>4.7 / 5</b> studio rating on ClassPass</p>
+  </div>
+</section>
+
+<section class="visit wrap">
+  <div class="rv">
+  <p class="sec-label">Where we train</p>
+  <h2>In the gym or online</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>The Base</h3>
+      <p>Max Burn Gym<br>Al Quoz 3, Street 4, Warehouse 10, Dubai<br><b>Sessions also available in the BurJuman area.</b></p>
+    </div>
+    <div class="card">
+      <h3>Start with a conversation</h3>
+      <p>Tell Coach Alash your goal and your schedule. You'll get a straight answer on the right program: <b>no pressure, no packages pushed</b>.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Train<span>IQ</span></div>
+    <p>TrainIQ by Coach Alash · Dubai · @coach_alash</p>
+  </div>
+</footer>
+
+<div class="sticky-wa">
+  <a href="https://wa.me/971585290353?text=Hi%20Coach%2C%20I%27d%20like%20to%20book%20a%20consultation">
+    <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 2.6 1.1 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+    Message Coach Alash
+  </a>
+</div>
+</main>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
