@@ -1,0 +1,217 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pitstop Barbers · Karama, Dubai · 5.0 rated barbershop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#121316;
+  --asphalt-2:#1A1C20;
+  --line:rgba(242,240,235,.12);
+  --bone:#F2F0EB;
+  --bone-dim:rgba(242,240,235,.6);
+  --red:#E23B2E;
+  --red-deep:#B92A1F;
+  --wa:#25D366;
+  --disp:'Anton',Impact,'Arial Narrow',sans-serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--asphalt);color:var(--bone);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px}
+@media(min-width:900px){.wrap{max-width:980px}}
+.check{height:14px;background:repeating-conic-gradient(var(--bone) 0% 25%, var(--asphalt) 0% 50%) 0 0/14px 14px;opacity:.9}
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:13px 22px;background:rgba(18,19,22,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .logo{font-family:var(--disp);font-size:1.2rem;letter-spacing:.04em;color:var(--bone);text-decoration:none;text-transform:uppercase}
+.bar .logo span{color:var(--red)}
+.bar-cta{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#06281a;background:var(--wa);padding:9px 16px;border-radius:4px;text-decoration:none;white-space:nowrap}
+.hero{padding:64px 0 52px;position:relative}
+.hero::after{content:"";position:absolute;right:-80px;top:20px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(226,59,46,.16),transparent 65%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red)}
+h1{font-family:var(--disp);font-size:clamp(3.4rem,13vw,7rem);line-height:.95;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--red)}
+.hero .sub{margin-top:20px;color:var(--bone-dim);max-width:32em;font-size:1.02rem}
+.hero .sub b{color:var(--bone)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:4px;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#06281a}
+.btn-ghost{border:1px solid var(--line);color:var(--bone)}
+.wa-ic{width:19px;height:19px;flex:none}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--asphalt-2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+@media(min-width:900px){.stats .wrap{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:22px 10px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+@media(max-width:899px){.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.stat .v{font-family:var(--disp);font-size:2rem;color:var(--bone);font-variant-numeric:tabular-nums}
+.stat .v span{color:var(--red)}
+.stat .k{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--bone-dim);margin-top:4px}
+section{padding:58px 0}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.sec-label::before{content:"";width:26px;height:2px;background:var(--red)}
+h2{font-family:var(--disp);font-size:clamp(2rem,7.5vw,3.2rem);line-height:1.02;text-transform:uppercase;text-wrap:balance;margin-bottom:20px}
+.board{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--asphalt-2)}
+.board .row{display:flex;align-items:baseline;gap:12px;padding:17px 20px;border-bottom:1px solid var(--line)}
+.board .row:last-child{border-bottom:0}
+.board .n{font-weight:700;font-size:1rem;color:var(--bone)}
+.board .d{font-size:.82rem;color:var(--bone-dim);margin-top:2px}
+.board .dots{flex:1;border-bottom:1px dotted rgba(242,240,235,.22);transform:translateY(-4px)}
+.board .p{font-family:var(--disp);font-size:1.25rem;color:var(--red);font-variant-numeric:tabular-nums;white-space:nowrap}
+.board .p small{font-size:.7rem;color:var(--bone-dim);font-family:var(--sans);font-weight:600;letter-spacing:.06em}
+.note{margin-top:16px;font-size:.82rem;color:var(--bone-dim)}
+@media(min-width:900px){.board-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.board-grid .board{height:fit-content}}
+.crew{background:var(--asphalt-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.crew p.body{color:var(--bone-dim);max-width:36em}
+.crew p.body b{color:var(--bone)}
+.crew-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.crew-tags span{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:4px;padding:8px 14px;color:var(--bone)}
+.score{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.score .num{font-family:var(--disp);font-size:3.6rem;line-height:1;color:var(--red)}
+.score .stars{color:var(--red);letter-spacing:2px}
+.score .lbl{font-size:.82rem;color:var(--bone-dim)}
+.rev-grid{display:grid;gap:14px}
+@media(min-width:900px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+.rev{border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--asphalt-2)}
+.rev q{font-size:.95rem;color:var(--bone);quotes:'\201C' '\201D'}
+.rev .who{margin-top:12px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.visit .card{border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--asphalt-2)}
+.visit .card+.card{margin-top:14px}
+@media(min-width:900px){.visit .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.visit .card+.card{margin-top:0}}
+.visit h3{font-family:var(--disp);font-size:1.35rem;text-transform:uppercase;margin-bottom:8px}
+.visit p{font-size:.92rem;color:var(--bone-dim)}
+.visit p b{color:var(--bone)}
+footer{padding:42px 0 120px;border-top:1px solid var(--line);text-align:center}
+footer .logo{font-family:var(--disp);font-size:1.6rem;text-transform:uppercase}
+footer .logo span{color:var(--red)}
+footer p{font-size:.8rem;color:var(--bone-dim);margin-top:8px}
+.sticky-wa{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(18,19,22,.6) 30%,rgba(18,19,22,.94))}
+.sticky-wa a{display:flex;align-items:center;justify-content:center;gap:10px;max-width:640px;margin:0 auto;background:var(--wa);color:#06281a;font-weight:700;font-size:1rem;padding:16px;border-radius:6px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+@media(min-width:900px){.sticky-wa{display:none}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+
+<main>
+<div class="check" aria-hidden="true"></div>
+<div class="bar">
+  <a class="logo" href="#top">Pitstop<span>.</span></a>
+  <a class="bar-cta" href="https://wa.me/971558608559?text=Hi%2C%20I%27d%20like%20to%20book%20at%20Pitstop%20Barbers">Book now</a>
+</div>
+
+<header class="hero wrap" id="top">
+  <p class="eyebrow">Barbershop · Al Karama, Dubai</p>
+  <h1>Pit in.<br>Roll out <em>sharp.</em></h1>
+  <p class="sub">Karama's highest-rated barbershop on Fresha: <b>5.0 stars across 8,000+ reviews</b>. Precision fades, signature beard work and a multinational crew, open every day until midnight.</p>
+  <div class="cta-row">
+    <a class="btn btn-wa" href="https://wa.me/971558608559?text=Hi%2C%20I%27d%20like%20to%20book%20at%20Pitstop%20Barbers">
+      <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 2.6 1.1 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Book on WhatsApp</a>
+    <a class="btn btn-ghost" href="#services">Price list</a>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="v">5.0<span>★</span></div><div class="k">Fresha rating</div></div>
+    <div class="stat"><div class="v">8,257</div><div class="k">Five-star reviews</div></div>
+    <div class="stat"><div class="v">10–12</div><div class="k">Open till midnight</div></div>
+    <div class="stat"><div class="v">7<span>/7</span></div><div class="k">Days a week</div></div>
+  </div>
+</div>
+
+<section class="wrap" id="services">
+  <div class="rv">
+  <p class="sec-label">The service menu</p>
+  <h2>Fixed prices. No surprises.</h2>
+  <div class="board-grid">
+    <div class="board">
+      <div class="row"><div><div class="n">Pitstop Signature Haircut</div><div class="d">Skin fade, buzz, scissor or afro fade</div></div><div class="dots"></div><div class="p"><small>from</small> AED 50</div></div>
+      <div class="row"><div><div class="n">Basic Haircut</div><div class="d">Clean, quick, precise</div></div><div class="dots"></div><div class="p"><small>from</small> AED 35</div></div>
+      <div class="row"><div><div class="n">Signature Beard Trim &amp; Styling</div><div class="d">With beard fading · 20 min</div></div><div class="dots"></div><div class="p"><small>from</small> AED 30</div></div>
+      <div class="row"><div><div class="n">Beard Line-Up</div><div class="d">No fading · 15 min</div></div><div class="dots"></div><div class="p"><small>from</small> AED 25</div></div>
+    </div>
+    <div class="board">
+      <div class="row"><div><div class="n">Pitstop Standard Cut</div><div class="d">Full grooming pack · 45 min</div></div><div class="dots"></div><div class="p">AED 120</div></div>
+      <div class="row"><div><div class="n">Pitstop Senior</div><div class="d">Five services, one seat</div></div><div class="dots"></div><div class="p">AED 151</div></div>
+      <div class="row"><div><div class="n">And beyond the chair</div><div class="d">Head spa, facials, coloring, hand &amp; foot spa, waxing, massage</div></div><div class="dots"></div><div class="p"><small>from</small> AED 30</div></div>
+    </div>
+  </div>
+  <p class="note">Live availability and the full menu are on our Fresha booking page, or just message us on WhatsApp.</p>
+  </div>
+</section>
+
+<section class="crew">
+  <div class="wrap rv">
+    <p class="sec-label">The pit crew</p>
+    <h2>The barbers people book by name</h2>
+    <p class="body">Read the reviews and you'll notice something: customers don't come back to Pitstop, they come back to <b>their barber</b>. A multinational team, kid-friendly chairs, parking at the door.</p>
+    <div class="crew-tags">
+      <span>Avinash</span><span>Chris</span><span>Benson</span><span>Kevin</span><span>Haseeb</span><span>Daniel</span><span>John</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="rv">
+  <p class="sec-label">The scoreboard</p>
+  <div class="score">
+    <div class="num">5.0</div>
+    <div><div class="stars">★★★★★</div><div class="lbl">8,257 reviews on Fresha</div></div>
+  </div>
+  <div class="rev-grid">
+    <div class="rev"><q>Professional experience, great haircut by Avinash.</q><div class="who">Ajith S</div></div>
+    <div class="rev"><q>The best barbershop in Karama. Chris is amazing.</q><div class="who">Emir</div></div>
+    <div class="rev"><q>If you're looking for an affordable premium barber in Dubai, Pitstop Barbers is the place.</q><div class="who">Akil</div></div>
+  </div>
+  </div>
+</section>
+
+<section class="visit wrap">
+  <div class="rv">
+  <p class="sec-label">Find the garage</p>
+  <h2>Easy to reach, open late</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Where</h3>
+      <p>Shop 16, Al Shafar Park Tower<br>119 Sheikh Rashid Road, Al Karama, Dubai<br><b>Parking available · near public transport</b></p>
+    </div>
+    <div class="card">
+      <h3>When</h3>
+      <p>Monday – Sunday<br><b>10:00 am – 12:00 midnight</b><br>Walk in, or book ahead and skip the wait.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Pitstop<span>.</span></div>
+    <p>Pitstop Barbers · Al Karama, Dubai · @pitstopbarbersuae · pitstopbarbersuae@gmail.com</p>
+  </div>
+</footer>
+<div class="check" aria-hidden="true"></div>
+
+<div class="sticky-wa">
+  <a href="https://wa.me/971558608559?text=Hi%2C%20I%27d%20like%20to%20book%20at%20Pitstop%20Barbers">
+    <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 2.6 1.1 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+    Book on WhatsApp
+  </a>
+</div>
+</main>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
